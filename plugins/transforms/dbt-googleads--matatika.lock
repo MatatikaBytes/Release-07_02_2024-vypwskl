@@ -1,0 +1,26 @@
+{
+  "plugin_type": "transforms",
+  "name": "dbt-googleads",
+  "namespace": "tap_googleads",
+  "variant": "matatika",
+  "label": "dbt-googleads",
+  "repo": "https://github.com/Matatika/dbt-tap-googleads",
+  "pip_url": "https://github.com/Matatika/dbt-tap-googleads@v0.4.0",
+  "requires": {
+    "EXTRACTORS": [
+      {
+        "name": "tap-googleads",
+        "variant": "matatika"
+      }
+    ],
+    "TRANSFORMERS": [
+      {
+        "name": "dbt",
+        "variant": "dbt-labs"
+      }
+    ]
+  },
+  "vars": {
+    "schema": "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+  }
+}
